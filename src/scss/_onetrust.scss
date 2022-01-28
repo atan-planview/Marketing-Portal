@@ -1,0 +1,386 @@
+body {
+  button{
+    cursor: pointer;
+  }
+  .optanon-alert-box-wrapper  {
+    position: fixed; 
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2147483648;
+    padding: 8px 16px;
+    min-height: 50px;
+    background: $_Cloud !important;
+    @media screen and (min-width: $screen-sm-min) { 
+      padding: 16px 316px 16px 16px;
+      min-height: 110px;
+    }
+    @media screen and (min-width: $screen-lg-min) {
+      min-height: 50px;
+      padding-left: 32px;
+    }
+    // &[style^="display: none"] + #optanon,
+    // &[style*="display: none"] + #optanon{
+    //   display: none;
+    // }
+    p{
+      font-size: 16px;
+    }
+    .optanon-alert-box-button-middle{
+      background: transparent !important;
+    }
+    .optanon-alert-box-close.banner-close-button{
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      float: right;
+      font-weight: bold;
+      @media screen and (min-width: $screen-sm-min) {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+      }
+      @media screen and (min-width: $screen-lg-min) {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &:before{
+        content: '\e951';
+        font-family: pv-fonts;
+      }
+    }
+    .optanon-alert-box-button-container .optanon-alert-box-button.optanon-button-close{
+      display: none !important;
+    }
+    .optanon-alert-box-bg{
+      .optanon-alert-box-button-container{
+        text-align: center;
+        @media screen and (min-width: $screen-sm-min) {
+          position: absolute;
+          bottom: 16px;
+          right: 16px;
+        }
+        @media screen and (min-width: $screen-lg-min) { 
+          bottom: auto;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 42px;
+        }
+      }
+      .optanon-alert-box-button{
+        display: inline-block !important;
+        button{
+          background: $_UltraViolet;
+          font-size: 14px;
+          padding: 16px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          &.cookie-settings-button{
+            background: transparent;
+            color: $_UltraVioletDark !important;
+          }
+        }
+        &.optanon-button-more{
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
+  #optanon.modern{
+    #optanon-popup-bg{
+      position: fixed;
+      display: none;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba($_DarkBlue, 0.96);
+      z-index: 2147483649;
+    }
+    #optanon-branding-top-logo{
+      position: absolute;
+      top: -72px;
+      left: 0;
+      height: 32px;
+      width: 115px;
+      background-position: top left;
+      background-size: auto 32px;
+      background-repeat: no-repeat;
+      @media screen and (min-width: $screen-sm-min) {
+        top: -78px;
+      }
+      @media screen and (min-width: $screen-lg-min) {
+        top: -116px;
+      }
+    }
+    #optanon-popup-wrapper{
+      display: none;
+      position: absolute;
+      top: 40px !important;
+      left: 16px;
+      right: 16px;
+      z-index: 2147483650;
+      outline: none;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      @media screen and (min-width: $screen-lg-min) {
+        max-width: 1008px;
+      }
+      .optanon-white-button-middle{
+        background: transparent !important;
+      }
+      #optanon-popup-top{
+        .optanon-close{
+          position: absolute;
+          top: -38px;
+          right: 0;
+          background: none;
+          color: rgba($_White, .72);
+          font-size: 24px;
+          width: auto;
+          height: auto;
+          border: none;
+          @media screen and (min-width: $screen-lg-min) {
+            top: -16px;
+          }
+          &:before{
+            content: '\e967';
+            font-family: pv-fonts;
+          }
+          #optanon-close{
+            display: none;
+          }
+        }
+      }
+      #optanon-popup-body  {
+        position: relative;
+        background: $_White;
+        margin-top: 32px;
+        @media only screen and (min-width: 47em){
+          margin-top: 40px;
+        }
+        @media screen and (min-width: $screen-lg-min) {
+          margin-top: 24px;
+          padding-left: 280px;
+          height: 488px;
+          box-sizing: border-box;
+        }
+        .legacy-preference-banner-title.h2{
+          position: absolute;
+          top: -35px;
+          left: 0;
+          @include font-stack(900,'',16px);
+          margin: 0;
+          text-align: center;
+          right: 0;
+          padding: 8px 0;
+          background: $_BrightRed;
+          color: $_White;
+          @media screen and (min-width: $screen-lg-min) {
+            width: 280px;
+            padding: 24px 0;
+            top: 0;
+          }
+        }
+      }
+    }
+    #optanon-popup-body-left{
+      @media screen and (min-width: $screen-lg-min) {
+        position: absolute;
+        top: 67px;
+        left: 0;
+        width: 280px;
+        height: calc(100% - 67px);
+        background: #eee;
+      }
+      #optanon-menu{
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        @media only screen and (min-width: 47em){
+          margin: 0;
+        }
+        .menu-item-on,
+        .menu-item-off{
+          position: relative;
+          background: rgba($_Sand, .16);
+          min-height: auto;
+          cursor: pointer;
+          @media screen and (min-width: $screen-lg-min) {
+            border: none;
+          } 
+          &:before{
+            font-family: pv-fonts;
+            position: absolute;
+            top: 50%;
+            left: 16px;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: rgba($_NightSky, .32);
+          }
+          @media only screen and (min-width: 47em){
+            padding: 0;
+          }
+          p{
+            margin: 0px 32px 0px 50px;
+            padding: 12px 0;
+            button{
+              border: none;
+              background: transparent;
+            }
+            a{
+              @include font-stack(300);
+              color: $_UltraVioletDark;
+              font-weight: normal;
+            }
+          }
+          &.menu-item-selected{
+            background: $_White !important;
+            p{
+              a{
+                @include font-stack(900);
+                color: $_NightSky; 
+              }
+            }
+            &:before{
+              color: $_NightSky;
+            }
+          }
+        }
+        .menu-item-about{
+          &:before{
+            content: '\e997';
+          }
+        }
+        .menu-item-necessary{
+          &:before{
+            content: '\e969';
+          }
+        }
+        .menu-item-performance{
+          &:before{
+            content: '\e995';
+          }
+        }
+        .menu-item-functional{
+          &:before{
+            content: '\e97f';
+          }
+        }
+        .menu-item-advertising{
+          &:before{
+            content: '\e996';
+          }
+        }
+        .menu-item-moreinfo{
+          &:before{
+            content: '\e066';
+          }
+        }
+      }
+    }
+    #optanon-popup-body-right{
+      padding: 16px 32px;
+      .header-3{
+        @include font-stack(900,'', 16px);
+        margin-bottom: 16px;
+      }
+      .optanon-status-on{
+        color: $_Grass;
+      }
+      .optanon-cookies-used{
+        margin-bottom: 0;
+        border-bottom: 1px solid;
+      }
+      .optanon-status{
+        .fieldset{
+          width: 40px;
+          input{
+            display: none;
+          }
+          label{
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            padding-left: 50px;
+            margin-bottom: 8px;
+            &:before{
+              content: '';
+              position: absolute;
+              border: 1px solid $_NightSky;
+              top: 0;
+              left: 0;
+              width: 40px;
+              height: 20px;
+            }
+            &:after{
+              content: '';
+              position: absolute;
+              width: 18px;
+              height: 18px;
+              top: 2px;
+              left: 2px;
+              background-color: $_NightSky;
+            }
+          }
+          input:checked + label{
+            &:before{
+              border-color: $_Grass;
+            }
+            &:after{
+              transform: translateX(18px);
+              background-color: $_Grass;
+            }
+          }
+        }
+        p{
+          margin-top: 12px;
+        }
+      }
+      .optanon-main-info-text{
+        max-height: 250px;
+        overflow-y: auto;
+        padding-right: 10px;
+        @media screen and (min-width: $screen-lg-min) {
+          height: 380px;
+          max-height: 100%;
+        }
+        .optanon-cookie-list{
+          p{
+            font-size: 14px;
+            border-bottom: 1px solid $_Plaster; 
+          }
+        }
+      }
+    }
+    #optanon-popup-bottom{
+      background: transparent !important;
+      @media screen and (min-width: $screen-sm-min) {
+        text-align: right;
+      }
+      .optanon-button-wrapper{
+        display: block;
+        @media screen and (min-width: $screen-sm-min) {
+          display: inline-block;
+          margin: 8px;
+        }
+      }
+      button{
+        display: block;
+        border: 2px solid $_Cloud;
+        background: none;
+        padding: 12px;
+        width: 100%;
+        margin: 8px 0;
+        min-width: 170px;
+      }
+    }
+  }
+  &.inIframe{
+    #optanon.modern #optanon-popup-bg{
+      display: none !important;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+$color-button-primary: $_White;
+$color-button-primary-hover: $_NotWhite;
+$color-button-primary-background: $_UltraViolet;
+$color-button-primary-background-hover: $_UltraVioletDark;
+
+$color-button-secondary: $_UltraViolet;
+$color-button-secondary-hover: $_UltraVioletDark;
+$color-button-secondary-dark: $_White;
+$color-button-secondary-dark-hover: rgba($_White, 0.08);
+
+.button {
+  @include font-stack(900, 'heavy', 18px, 18px);
+  width: 100%;
+  max-width: 328px;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  @media screen and (min-width: $screen-sm-min) {
+    max-width: 280px;
+  }
+  &.primary{
+    background: $color-button-primary-background; 
+    color: $color-button-primary;
+    &:hover{
+      background: $color-button-primary-background-hover; 
+      color: $color-button-primary-hover;
+    }
+  }
+  &.secondary {
+    border: 4px solid $color-button-secondary;
+    color: $color-button-secondary;
+    &:hover {
+      border-color: $color-button-secondary-hover;
+      color: $color-button-secondary-hover;
+    }
+    &.dark {
+      border-color: $_White;
+      color: $_White;
+      &:hover {
+        background: $color-button-secondary-dark-hover;
+      }
+    }
+  }
+  &.large {
+    padding: 15px 16px;
+  }
+  &.has-subtext{
+    .subtext{
+      display: block;
+      @include font-stack(500, 'medium', 12px, 12px);
+    }
+  }
+}

@@ -1,0 +1,178 @@
+/*
+ * Base Plandeux styling
+ *
+ */
+
+* { box-sizing: border-box; }
+
+html {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  line-height: 1.5;
+  -ms-overflow-style: scrollbar;
+  @include font-stack(300, 'book', 16px, 26px);
+  overflow-x: hidden;
+  color: $_NightSky; 
+}
+.no-style{
+  @include font-stack(300);
+  margin: 0;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+
+  @media (min-width: $screen-sm-min) { 
+    width: 750px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    width: 970px;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    width: 100%;
+    max-width: 1440px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+.lead{
+  @include font-stack(900, 'medium', 14px);
+  text-transform: uppercase;
+  color: rgba($_NightSky, .48);
+  margin: 0 0 8px;
+  @media screen and (min-width: $screen-lg-min) {
+    font-size: 16px;
+  }
+}
+.l1-heading{
+  font-size: 32px;
+  @include font-stack(900);
+  line-height: 1.2;
+  margin: 0 0 16px;
+  @media screen and (min-width: $screen-sm-min) {
+    font-size: 48px;
+  }
+  @media screen and (min-width: $screen-lg-min) {
+    font-size: 56px;
+  }
+} 
+.l2-heading{
+  font-size: 24px;
+  @include font-stack(900);
+  line-height: 1.2;
+  margin: 0 0 16px;
+  @media screen and (min-width: $screen-sm-min) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: $screen-lg-min) {
+    font-size: 40px;
+  }
+}
+.l3-heading{
+  font-size: 18px;
+  @include font-stack(900);
+  line-height: 1.2;
+  margin: 0 0 16px;
+  @media screen and (min-width: $screen-sm-min) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: $screen-lg-min) {
+    font-size: 32px;
+  }
+}
+.l4-heading{
+  font-size: 16px;
+  @include font-stack(900);
+  line-height: 1.2;
+  margin: 0 0 16px;
+  @media screen and (min-width: $screen-sm-min) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: $screen-lg-min) {
+    font-size: 24px;
+  }
+}
+.l5-heading{
+  font-size: 18px;
+  @include font-stack(900);
+  line-height: 1.2;
+  margin: 0 0 16px;
+  @media screen and (min-width: $screen-sm-min) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: $screen-lg-min) {
+    font-size: 24px;
+  }
+}
+.l1-heading sup,
+.l2-heading sup,
+.l3-heading sup,
+.l4-heading sup,
+.l5-heading sup {
+  font-size: 12px;
+  line-height: 2.4;
+  padding-bottom: 16px;
+ 
+  @media screen and (min-width: $screen-sm-min) {
+    font-size: 14px;
+    line-height: 1;
+  }
+}
+p{
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  @media screen and (min-width: $screen-lg-min) {
+    font-size: 18px;
+  }
+}
+hr.stubby{
+  border: none; 
+  border-bottom: 8px solid $_BrightRed;
+  width: 64px;
+  margin: 8px auto 24px;
+  @media (min-width: $screen-sm-min){
+    margin: 16px auto 32px;
+  }
+}
+strong{
+  @include font-stack(800);
+}
+* {
+  box-sizing: border-box;
+}
+body{
+  @include font-stack(300);
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $_UltraVioletDark;
+  transition: all ease 300ms;
+  &:focus,
+  &:hover {
+    color: $_UltraViolet;
+    text-decoration: none !important;
+  }
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

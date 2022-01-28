@@ -1,0 +1,38 @@
+/*
+ * Mixin to swap font families
+ * Must include define('PV_FONT', '//fast.fonts.net/cssapi/58841da2-0523-45dd-9aff-ce6b42ca9557.css'); in wp-config.php
+ */
+
+ @mixin font-stack($weight:'300', $family:'', $size:'', $height: 1.2) {
+  /* from fonts.com
+   * font-family:'Avenir LT W01_35 Light1475496';
+   * font-family:'Avenir LT W01_45 Book1475508';
+   * font-family:'Avenir LT W01_65 Medium1475532';
+   * font-family:'Avenir LT W01_85 Heavy1475544';
+   * font-family:'Avenir LT W01_95 Black1475556';
+  */
+  /* Catch unspecified families */
+
+  $avenir: 'Avenir LT W01_45 Book1475508';
+  @if 900==$weight {
+    $avenir: 'Avenir LT W01_85 Heavy1475544';
+  }
+  @else if 500==$weight { 
+    $avenir: 'Avenir LT W01_65 Medium1475532';
+  }
+
+  font-family: $avenir, Arial, Verdana, Helvetica, sans-serif;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  @if ''!=$size {
+    font-size: $size;
+  }
+  ;
+  @if ''!=$height {
+    line-height: $height;
+  }
+  ;
+}
